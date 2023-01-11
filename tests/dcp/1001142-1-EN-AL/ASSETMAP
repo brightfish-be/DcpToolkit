@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetMap xmlns="http://www.digicine.com/PROTO-ASDCP-AM-20040311#">
+  <Id>urn:uuid:33427e5f-6602-4eb2-ba5d-3becd978f5da</Id>
+  <AnnotationText>BF-1001142-1-BrightfishJingleIn2023-7s_C_EN-XX_BE-AL_51_2K_BF_20221220_BF_IOP_OV</AnnotationText>
+  <VolumeCount>1</VolumeCount>
+  <IssueDate>2022-12-20T10:35:03+01:00</IssueDate>
+  <Issuer>Brightfish Digital</Issuer>
+  <Creator>Fraunhofer IIS easyDCP Creator+ 3.8.1</Creator>
+  <AssetList>
+    <Asset>
+      <Id>urn:uuid:5e9f8cfd-76a4-4479-8065-66835a68f378</Id>
+      <ChunkList>
+        <Chunk>
+          <Path>5e9f8cfd-76a4-4479-8065-66835a68f378_video.mxf</Path>
+        </Chunk>
+      </ChunkList>
+    </Asset>
+    <Asset>
+      <Id>urn:uuid:18aafe90-952d-40db-aee8-96b175f87062</Id>
+      <ChunkList>
+        <Chunk>
+          <Path>18aafe90-952d-40db-aee8-96b175f87062_audio.mxf</Path>
+        </Chunk>
+      </ChunkList>
+    </Asset>
+    <Asset>
+      <Id>urn:uuid:31c13edb-f925-4878-b6cc-546dd055fb96</Id>
+      <PackingList/>
+      <ChunkList>
+        <Chunk>
+          <Path>PKL_31c13edb-f925-4878-b6cc-546dd055fb96.xml</Path>
+        </Chunk>
+      </ChunkList>
+    </Asset>
+    <Asset>
+      <Id>urn:uuid:eba29798-3121-4d26-934f-19c2cf0815b3</Id>
+      <ChunkList>
+        <Chunk>
+          <Path>CPL_eba29798-3121-4d26-934f-19c2cf0815b3.xml</Path>
+        </Chunk>
+      </ChunkList>
+    </Asset>
+  </AssetList>
+</AssetMap>

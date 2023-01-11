@@ -1,8 +1,9 @@
 {
-    "name": "brightfish-be/dcptoolkit",
+    "name": "brightfish/dcptoolkit",
     "description": "PHP Package to read and write DCP Digital Cinema packages",
     "keywords": [
-        "brightfish-be",
+        "brightfish",
+        "dcp",
         "dcptoolkit"
     ],
     "homepage": "https://github.com/brightfish-be/dcptoolkit",
@@ -15,25 +16,26 @@
         }
     ],
     "require": {
-        "php": "^8.1"
+        "php": "^8.1",
+      "ext-simplexml": "*"
     },
     "require-dev": {
-        "pestphp/pest": "^1.20",
-        "laravel/pint": "^1.2"
+        "laravel/pint": "^1.2",
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {
-            "Brightfish-be\\DcpToolkit\\": "src"
+            "Brightfish\\DcpToolkit\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Brightfish-be\\DcpToolkit\\Tests\\": "tests"
+            "Brightfish\\DcpToolkit\\Tests\\": "tests"
         }
     },
     "scripts": {
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage",
         "format": "vendor/bin/pint"
     },
     "config": {

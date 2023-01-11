@@ -19,7 +19,7 @@
     verbose="true"
 >
     <testsuites>
-        <testsuite name="Brightfish-be Test Suite">
+        <testsuite name="Brightfish Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
