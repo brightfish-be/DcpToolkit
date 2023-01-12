@@ -1,4 +1,5 @@
 <?php
+
 namespace Brightfish\DcpToolkit\Writers;
 
 use Brightfish\DcpToolkit\Helpers\CplTime;

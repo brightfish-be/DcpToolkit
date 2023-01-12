@@ -25,12 +25,14 @@ class BaseWriter
             throw new InputMissingException("File not found: [$filename]");
         }
         $this->contents = simplexml_load_file($filename);
+
         return $this;
     }
 
     public function loadFromText(string $text): static
     {
         $this->contents = simplexml_load_string($text);
+
         return $this;
     }
 
