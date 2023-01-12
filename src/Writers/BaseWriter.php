@@ -1,10 +1,11 @@
 <?php
 
-namespace Brightfish\CplRenamer\Writers;
+namespace Brightfish\DcpToolkit\Writers;
 
-use Brightfish\CplRenamer\Exceptions\InputInvalidException;
-use Brightfish\CplRenamer\Exceptions\InputMissingException;
-use Brightfish\CplRenamer\Exceptions\OutputFailedException;
+use Brightfish\DcpToolkit\Exceptions\InputInvalidException;
+use Brightfish\DcpToolkit\Exceptions\InputMissingException;
+use Brightfish\DcpToolkit\Exceptions\OutputFailedException;
+use DOMDocument;
 use SimpleXMLElement;
 
 class BaseWriter
@@ -18,17 +19,19 @@ class BaseWriter
     /**
      * @throws InputMissingException
      */
-    public function loadFromFile(string $filename)
+    public function loadFromFile(string $filename): static
     {
         if (! file_exists($filename)) {
             throw new InputMissingException("File not found: [$filename]");
         }
         $this->contents = simplexml_load_file($filename);
+        return $this;
     }
 
-    public function loadFromText(string $text)
+    public function loadFromText(string $text): static
     {
         $this->contents = simplexml_load_string($text);
+        return $this;
     }
 
     /**
@@ -40,7 +43,7 @@ class BaseWriter
         if (! isset($this->contents)) {
             throw new InputInvalidException('No contents to export');
         }
-        $dom = new \DOMDocument('1.0');
+        $dom = new DOMDocument('1.0');
         $dom->preserveWhiteSpace = true;
         $dom->formatOutput = true;
         $dom->loadXML($this->contents->asXML());

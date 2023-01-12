@@ -1,9 +1,9 @@
 <?php
 
-namespace Brightfish\CplRenamer\Writers;
+namespace Brightfish\DcpToolkit\Writers;
 
-use Brightfish\CplRenamer\Helpers\CplTime;
-use Brightfish\CplRenamer\Helpers\CplUuid;
+use Brightfish\DcpToolkit\Helpers\CplTime;
+use Brightfish\DcpToolkit\Helpers\CplUuid;
 use SimpleXMLElement;
 
 class PklWriter extends BaseWriter

@@ -1,6 +1,6 @@
 <?php
 
-namespace Brightfish\CplRenamer\Writers;
+namespace Brightfish\DcpToolkit\Writers;
 
 class VolWriter extends BaseWriter
 {

@@ -16,7 +16,7 @@ class CplDigestTest extends TestCase
 
     public function testSize()
     {
-        $this->assertEquals(10631, CplDigest::size($this->file), 'Text Digest');
+        $this->assertEquals(10631, CplDigest::size($this->file), 'File Size');
     }
 
     public function testText()

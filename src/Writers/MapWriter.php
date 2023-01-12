@@ -1,10 +1,9 @@
 <?php
+namespace Brightfish\DcpToolkit\Writers;
 
-namespace Brightfish\CplRenamer\Writers;
-
-use Brightfish\CplRenamer\Helpers\CplTime;
-use Brightfish\CplRenamer\Helpers\CplUuid;
-use Brightfish\CplRenamer\Parsers\BaseParser;
+use Brightfish\DcpToolkit\Helpers\CplTime;
+use Brightfish\DcpToolkit\Helpers\CplUuid;
+use Brightfish\DcpToolkit\Parsers\BaseParser;
 use SimpleXMLElement;
 
 class MapWriter extends BaseWriter
