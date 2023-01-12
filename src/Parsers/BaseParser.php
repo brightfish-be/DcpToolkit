@@ -8,6 +8,11 @@ class BaseParser
 {
     protected SimpleXMLElement $xml;
 
+    public function getXml(): SimpleXMLElement
+    {
+        return $this->xml;
+    }
+
     public function __construct(string $file)
     {
         $this->xml = simplexml_load_file($file);
