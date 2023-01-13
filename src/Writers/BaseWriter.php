@@ -16,6 +16,18 @@ class BaseWriter
 
     protected string $Creator = 'Spottix Renamer';
 
+    protected array $templates;
+
+    public function __construct()
+    {
+        $templateFolder = __DIR__.'/templates';
+        $xmlFiles = glob("$templateFolder/*.xml");
+        foreach ($xmlFiles as $xmlFile) {
+            $xmlName = basename($xmlFile, '.xml');
+            $this->templates[$xmlName] = $xmlFile;
+        }
+    }
+
     /**
      * @throws InputMissingException
      */
@@ -25,12 +37,27 @@ class BaseWriter
             throw new InputMissingException("File not found: [$filename]");
         }
         $this->contents = simplexml_load_file($filename);
+
+        return $this;
+    }
+
+    /**
+     * @throws InputMissingException
+     */
+    public function loadFromTemplate(string $name): static
+    {
+        if (! isset($this->templates[$name])) {
+            throw new InputMissingException("Template not found: [$name]");
+        }
+        $this->contents = simplexml_load_file($this->templates[$name]);
+
         return $this;
     }
 
     public function loadFromText(string $text): static
     {
         $this->contents = simplexml_load_string($text);
+
         return $this;
     }
 

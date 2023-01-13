@@ -37,5 +37,4 @@ class CplWriter extends BaseWriter
 
         return sprintf('%03d%s', count($idList), strtoupper(substr(sha1($idListTxt), 0, $digest_length)));
     }
-
 }

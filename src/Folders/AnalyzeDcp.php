@@ -4,9 +4,7 @@ namespace Brightfish\DcpToolkit\Folders;
 
 class AnalyzeDcp
 {
-
-    static function files(string $folder): array
+    public static function files(string $folder): array
     {
-
     }
 }

@@ -2,15 +2,19 @@
 
 namespace Brightfish\DcpToolkit\Writers;
 
+use Brightfish\DcpToolkit\Exceptions\InputMissingException;
 use Brightfish\DcpToolkit\Helpers\CplTime;
 use Brightfish\DcpToolkit\Helpers\CplUuid;
-use SimpleXMLElement;
 
 class PklWriter extends BaseWriter
 {
+    /**
+     * @throws InputMissingException
+     */
     public function __construct(string $name = 'PKL')
     {
-        $this->contents = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><PackingList xmlns="http://www.digicine.com/PROTO-ASDCP-PKL-20040311#"></PackingList>');
+        parent::__construct();
+        $this->loadFromTemplate('PackingList');
         $this->contents->addChild('Id', CplUuid::prefix4());
         $this->contents->addChild('AnnotationText', $name);
         $this->contents->addChild('IssueDate', CplTime::now());

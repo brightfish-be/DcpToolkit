@@ -1,16 +1,20 @@
 <?php
+
 namespace Brightfish\DcpToolkit\Writers;
 
 use Brightfish\DcpToolkit\Helpers\CplTime;
 use Brightfish\DcpToolkit\Helpers\CplUuid;
 use Brightfish\DcpToolkit\Parsers\BaseParser;
-use SimpleXMLElement;
 
 class MapWriter extends BaseWriter
 {
+    /**
+     * @throws \Exception
+     */
     public function __construct()
     {
-        $this->contents = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><AssetMap xmlns="http://www.digicine.com/PROTO-ASDCP-AM-20040311#"></AssetMap>');
+        parent::__construct();
+        $this->loadFromTemplate('AssetMap');
         $this->contents->addChild('Id', CplUuid::prefix4());
         $this->contents->addChild('VolumeCount', 1);
         $this->contents->addChild('IssueDate', CplTime::now());

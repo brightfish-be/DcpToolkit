@@ -2,10 +2,16 @@
 
 namespace Brightfish\DcpToolkit\Writers;
 
+use Brightfish\DcpToolkit\Exceptions\InputMissingException;
+
 class VolWriter extends BaseWriter
 {
+    /**
+     * @throws InputMissingException
+     */
     public function __construct()
     {
-        $this->contents = simplexml_load_string('<?xml version="1.0" encoding="UTF-8"?><VolumeIndex xmlns="http://www.digicine.com/PROTO-ASDCP-VL-20040311#"><Index>1</Index></VolumeIndex>');
+        parent::__construct();
+        $this->loadFromTemplate('VolumeIndex');
     }
 }
