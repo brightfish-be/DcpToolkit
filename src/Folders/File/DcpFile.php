@@ -2,7 +2,7 @@
 
 namespace Brightfish\DcpToolkit\Folders\File;
 
-abstract class DcpFile
+class DcpFile
 {
     public string $name;
 

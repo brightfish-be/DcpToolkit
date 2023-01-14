@@ -2,6 +2,7 @@
 
 namespace Brightfish\DcpToolkit\Parsers;
 
+use Brightfish\DcpToolkit\Exceptions\InputMissingException;
 use SimpleXMLElement;
 
 class BaseParser
@@ -13,8 +14,14 @@ class BaseParser
         return $this->xml;
     }
 
+    /**
+     * @throws InputMissingException
+     */
     public function __construct(string $file)
     {
+        if (! file_exists($file)) {
+            throw new InputMissingException("File not found: [$file]");
+        }
         $this->xml = simplexml_load_file($file);
     }
 

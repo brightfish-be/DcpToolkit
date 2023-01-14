@@ -10,4 +10,5 @@ enum Type
     case PKL;           // <Type>text/xml;asdcpKind=PKL</Type>
     case MAP;           // ASSETMAP / Assetmap.xml
     case VOL;           // VOLINDEX
+    case UNKNOWN;       // for other files
 }
