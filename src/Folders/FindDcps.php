@@ -19,7 +19,7 @@ class FindDcps
         exec("find \"$folder\" -maxdepth $levels -type f -name \"ASSETMAP*\"", $output);
         if ($output) {
             $dcpFolders = array_map(function ($value) {
-            return realpath(dirname($value));
+                return realpath(dirname($value));
             }, $output);
         }
 
