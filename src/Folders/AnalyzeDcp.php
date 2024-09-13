@@ -18,15 +18,15 @@ class AnalyzeDcp
             throw new InputMissingException("Folder not found: [$folder]");
         }
 
-        $dcp = new SimpleDcp();
+        $dcp = new SimpleDcp;
         $files = glob("$folder/*");
         foreach ($files as $file) {
-            $dcpFile = new DcpFile();
+            $dcpFile = new DcpFile;
             $dcpFile->path = realpath($file);
             $dcpFile->name = basename($file);
             $dcpFile->bytes = filesize($file);
             $dcpFile->type = self::detectType($dcpFile);
-            switch($dcpFile->type) {
+            switch ($dcpFile->type) {
                 case Type::CPL:
                     $dcp->cplFile = $dcpFile;
                     break;
