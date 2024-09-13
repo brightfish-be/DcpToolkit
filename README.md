@@ -1,7 +1,7 @@
 # PHP Package to read and write DCP Digital Cinema packages
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/brightfish/dcptoolkit.svg?style=flat-square)](https://packagist.org/packages/brightfish/dcptoolkit)
-[![Tests](https://img.shields.io/github/actions/workflow/status/brightfish/dcptoolkit/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/brightfish/dcptoolkit/actions/workflows/run-tests.yml)
+[![Tests](https://github.com/brightfish-be/DcpToolkit/actions/workflows/run-tests.yml/badge.svg)](https://github.com/brightfish-be/DcpToolkit/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/brightfish/dcptoolkit.svg?style=flat-square)](https://packagist.org/packages/brightfish/dcptoolkit)
 
 
