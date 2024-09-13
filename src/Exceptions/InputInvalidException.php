@@ -2,6 +2,4 @@
 
 namespace Brightfish\DcpToolkit\Exceptions;
 
-class InputInvalidException extends \Exception
-{
-}
+class InputInvalidException extends \Exception {}

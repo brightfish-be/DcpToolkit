@@ -2,6 +2,4 @@
 
 namespace Brightfish\DcpToolkit\Exceptions;
 
-class OutputFailedException extends \Exception
-{
-}
+class OutputFailedException extends \Exception {}
