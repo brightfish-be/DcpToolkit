@@ -1,6 +1,6 @@
 <?php
 
-namespace Brightfish\DcpToolkit\Folders\File;
+namespace Brightfish\DcpToolkit\DTO;
 
 class SimpleDcp
 {

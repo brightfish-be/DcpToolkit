@@ -2,10 +2,10 @@
 
 namespace Brightfish\DcpToolkit\Folders;
 
+use Brightfish\DcpToolkit\DTO\DcpFile;
+use Brightfish\DcpToolkit\DTO\SimpleDcp;
+use Brightfish\DcpToolkit\DTO\Type;
 use Brightfish\DcpToolkit\Exceptions\InputMissingException;
-use Brightfish\DcpToolkit\Folders\File\DcpFile;
-use Brightfish\DcpToolkit\Folders\File\SimpleDcp;
-use Brightfish\DcpToolkit\Folders\File\Type;
 
 class AnalyzeDcp
 {
@@ -98,6 +98,9 @@ class AnalyzeDcp
             }
             if (stripos($dcpFile->name, 'ASSETMAP') !== false) {
                 return Type::MAP;
+            }
+            if (stripos($dcpFile->name, 'VOLINDEX') !== false) {
+                return Type::VOL;
             }
             if (stripos($dcpFile->name, 'PKL') !== false) {
                 return Type::PKL;
