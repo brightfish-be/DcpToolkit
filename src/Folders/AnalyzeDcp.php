@@ -84,7 +84,7 @@ class AnalyzeDcp
                 return Type::Picture;
             }
 
-            return Type::UNKNOWN;
+            return Type::Picture;
         }
         if ($extension === 'cpl') {
             return Type::CPL;
