@@ -68,10 +68,19 @@ class AnalyzeDcp
             if (stripos($dcpFile->name, 'sound') !== false) {
                 return Type::Sound;
             }
+            if (stripos($dcpFile->name, 'wav') !== false) {
+                return Type::Sound;
+            }
+            if (stripos($dcpFile->name, 'pcm') !== false) {
+                return Type::Sound;
+            }
             if (stripos($dcpFile->name, 'video') !== false) {
                 return Type::Picture;
             }
             if (stripos($dcpFile->name, 'image') !== false) {
+                return Type::Picture;
+            }
+            if (stripos($dcpFile->name, 'j2c') !== false) {
                 return Type::Picture;
             }
 
