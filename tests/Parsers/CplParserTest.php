@@ -2,6 +2,7 @@
 
 namespace Brightfish\DcpToolkit\Tests\Parsers;
 
+use Brightfish\DcpToolkit\Exceptions\InputMissingException;
 use Brightfish\DcpToolkit\Parsers\CplParser;
 use PHPUnit\Framework\TestCase;
 
@@ -11,6 +12,9 @@ class CplParserTest extends TestCase
 
     private CplParser $parser;
 
+    /**
+     * @throws InputMissingException
+     */
     protected function setUp(): void
     {
         $this->parser = new CplParser($this->cpl_file);

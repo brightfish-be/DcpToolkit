@@ -8,15 +8,15 @@ use Brightfish\DcpToolkit\Exceptions\OutputFailedException;
 use DOMDocument;
 use SimpleXMLElement;
 
-class BaseWriter
+final class BaseWriter
 {
-    protected SimpleXMLElement $contents;
+    private SimpleXMLElement $contents;
 
-    protected string $Issuer = 'Brightfish';
+    private string $Issuer = 'Brightfish';
 
-    protected string $Creator = 'Spottix Renamer';
+    private string $Creator = 'Spottix Renamer';
 
-    protected array $templates;
+    private array $templates;
 
     public function __construct()
     {

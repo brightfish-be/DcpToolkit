@@ -96,6 +96,9 @@ class AnalyzeDcp
             if (stripos($dcpFile->name, 'CPL') !== false) {
                 return Type::CPL;
             }
+            if (stripos($dcpFile->name, 'ASSETMAP') !== false) {
+                return Type::MAP;
+            }
             if (stripos($dcpFile->name, 'PKL') !== false) {
                 return Type::PKL;
             }

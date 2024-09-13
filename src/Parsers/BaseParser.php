@@ -9,11 +9,6 @@ class BaseParser
 {
     protected SimpleXMLElement $xml;
 
-    public function getXml(): SimpleXMLElement
-    {
-        return $this->xml;
-    }
-
     /**
      * @throws InputMissingException
      */
@@ -23,6 +18,11 @@ class BaseParser
             throw new InputMissingException("File not found: [$file]");
         }
         $this->xml = simplexml_load_file($file);
+    }
+
+    public function getXml(): SimpleXMLElement
+    {
+        return $this->xml;
     }
 
     public function Id(): string
