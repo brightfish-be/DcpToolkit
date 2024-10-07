@@ -22,5 +22,4 @@ class AnalyzeDcpTest extends TestCase
         $this->assertNotEmpty($dcpObject->AssetMap);
         $this->assertNotEmpty($dcpObject->VolIndex);
     }
-
 }

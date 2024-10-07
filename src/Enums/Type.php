@@ -1,6 +1,6 @@
 <?php
 
-namespace Brightfish\DcpToolkit\DTO;
+namespace Brightfish\DcpToolkit\Enums;
 
 enum Type
 {

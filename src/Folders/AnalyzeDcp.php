@@ -4,7 +4,7 @@ namespace Brightfish\DcpToolkit\Folders;
 
 use Brightfish\DcpToolkit\DTO\DcpFile;
 use Brightfish\DcpToolkit\DTO\SimpleDcp;
-use Brightfish\DcpToolkit\DTO\Type;
+use Brightfish\DcpToolkit\Enums\Type;
 use Brightfish\DcpToolkit\Exceptions\InputMissingException;
 
 class AnalyzeDcp
@@ -74,6 +74,7 @@ class AnalyzeDcp
             if (stripos($dcpFile->name, 'pcm') !== false) {
                 return Type::Sound;
             }
+
             return Type::Picture;
 
         }

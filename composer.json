@@ -36,7 +36,8 @@
     },
     "scripts": {
         "test": "vendor/bin/pest",
-        "format": "vendor/bin/pint"
+        "format": "vendor/bin/pint",
+        "doc": "docker run --rm -v $(pwd):/data phpdoc/phpdoc:3 && git add doc/api"
     },
     "config": {
         "sort-packages": true,

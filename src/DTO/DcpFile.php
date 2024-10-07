@@ -2,6 +2,8 @@
 
 namespace Brightfish\DcpToolkit\DTO;
 
+use Brightfish\DcpToolkit\Enums\Type;
+
 class DcpFile
 {
     public string $name;
