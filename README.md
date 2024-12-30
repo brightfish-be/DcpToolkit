@@ -94,7 +94,6 @@ $dcp = AnalyzeDcp::simple($inputFolder);
 composer test
 ```
 
-
 ## Credits
 
 - [Peter Forret @ BF](https://github.com/brightfish-be)
