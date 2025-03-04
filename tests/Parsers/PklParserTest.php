@@ -16,7 +16,7 @@ class PklParserTest extends TestCase
         $this->parser = new PklParser($this->pkl_file);
     }
 
-    public function testId()
+    public function test_id()
     {
         $this->assertEquals(
             'urn:uuid:31c13edb-f925-4878-b6cc-546dd055fb96',
@@ -25,7 +25,7 @@ class PklParserTest extends TestCase
         );
     }
 
-    public function testCreator()
+    public function test_creator()
     {
         $this->assertEquals(
             'Fraunhofer IIS easyDCP Creator+ 3.8.1',
@@ -34,7 +34,7 @@ class PklParserTest extends TestCase
         );
     }
 
-    public function testIssuer()
+    public function test_issuer()
     {
         $this->assertEquals(
             'Brightfish Digital',
@@ -43,7 +43,7 @@ class PklParserTest extends TestCase
         );
     }
 
-    public function testIssueDate()
+    public function test_issue_date()
     {
         $this->assertEquals(
             '2022-12-20T10:35:03+01:00',
@@ -52,7 +52,7 @@ class PklParserTest extends TestCase
         );
     }
 
-    public function testAnnotationText()
+    public function test_annotation_text()
     {
         $this->assertEquals(
             'BF-1001142-1-BrightfishJingleIn2023-7s_C_EN-XX_BE-AL_51_2K_BF_20221220_BF_IOP_OV',
@@ -61,7 +61,7 @@ class PklParserTest extends TestCase
         );
     }
 
-    public function testContentTitleText()
+    public function test_content_title_text()
     {
         $this->assertEquals(
             '',
@@ -70,7 +70,7 @@ class PklParserTest extends TestCase
         );
     }
 
-    public function testAssetList()
+    public function test_asset_list()
     {
         $this->assertIsObject(
             $this->parser->AssetList(),
@@ -78,7 +78,7 @@ class PklParserTest extends TestCase
         );
     }
 
-    public function testAsset()
+    public function test_asset()
     {
         $this->assertIsObject(
             $this->parser->Asset(0),
@@ -86,5 +86,11 @@ class PklParserTest extends TestCase
         );
         $asset = $this->parser->Asset(0);
         $this->assertEquals(31438077, (int) $asset->Size, 'PKL Asset Size');
+    }
+
+    public function test_total_size()
+    {
+        $this->assertEquals(37372682, $this->parser->totalBytes(), 'Total size should be 37372682');
+
     }
 }

@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class CplUuidTest extends TestCase
 {
-    public function testUuidGeneration()
+    public function test_uuid_generation()
     {
         $this->assertEquals(36, strlen(CplUuid::v4()));
         $this->assertEquals(45, strlen(CplUuid::prefix4()));

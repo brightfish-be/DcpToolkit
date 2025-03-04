@@ -20,7 +20,7 @@ class CplParserTest extends TestCase
         $this->parser = new CplParser($this->cpl_file);
     }
 
-    public function testAnnotationText()
+    public function test_annotation_text()
     {
         $this->assertEquals(
             'BF-1001142-1-BrightfishJingleIn2023-7s_C_EN-XX_BE-AL_51_2K_BF_20221220_BF_IOP_OV',
@@ -29,7 +29,7 @@ class CplParserTest extends TestCase
         );
     }
 
-    public function testContentTitleText()
+    public function test_content_title_text()
     {
         $this->assertEquals(
             'BF-1001142-1-BrightfishJingleIn2023-7s_C_EN-XX_BE-AL_51_2K_BF_20221220_BF_IOP_OV',
@@ -38,7 +38,7 @@ class CplParserTest extends TestCase
         );
     }
 
-    public function testReelList()
+    public function test_reel_list()
     {
         $this->assertIsObject(
             $this->parser->ReelList(),
@@ -84,7 +84,7 @@ class CplParserTest extends TestCase
          */
     }
 
-    public function testReel()
+    public function test_reel()
     {
         $this->assertIsObject(
             $this->parser->Reel(),
@@ -92,7 +92,7 @@ class CplParserTest extends TestCase
         );
     }
 
-    public function testIssuer()
+    public function test_issuer()
     {
         $this->assertEquals(
             'Brightfish Digital',
@@ -101,7 +101,7 @@ class CplParserTest extends TestCase
         );
     }
 
-    public function testIssueDate()
+    public function test_issue_date()
     {
         $this->assertEquals(
             '2022-12-20T10:35:03+01:00',
@@ -110,7 +110,7 @@ class CplParserTest extends TestCase
         );
     }
 
-    public function testCreator()
+    public function test_creator()
     {
         $this->assertEquals(
             'Fraunhofer IIS easyDCP Creator+ 3.8.1',
@@ -119,12 +119,22 @@ class CplParserTest extends TestCase
         );
     }
 
-    public function testId()
+    public function test_id()
     {
         $this->assertEquals(
             'urn:uuid:eba29798-3121-4d26-934f-19c2cf0815b3',
             $this->parser->Id(),
             'CPL Uuid'
         );
+    }
+
+    public function test_total_frames()
+    {
+        $this->assertEquals(164, $this->parser->totalFrames(), 'total frames should be 164');
+    }
+
+    public function test_total_seconds()
+    {
+        $this->assertEquals(6.8333, $this->parser->totalSeconds(), 'total frames should be 6.8333');
     }
 }

@@ -11,7 +11,7 @@ class AnalyzeDcpTest extends TestCase
     /**
      * @throws InputMissingException
      */
-    public function testSimple()
+    public function test_simple()
     {
         $dcpFolder = __DIR__.'/../dcp/1001142-1-EN-AL';
         $dcpObject = AnalyzeDcp::simple($dcpFolder);

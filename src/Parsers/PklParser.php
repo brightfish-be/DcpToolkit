@@ -25,4 +25,16 @@ class PklParser extends BaseParser
         )
          */
     }
+
+    public function totalBytes(): int
+    {
+        $totalSize = 0;
+        foreach ($this->xml->AssetList as $asset) {
+            foreach ($asset->Asset as $file) {
+                $totalSize += $file->Size;
+            }
+        }
+
+        return $totalSize;
+    }
 }
