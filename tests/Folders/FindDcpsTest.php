@@ -11,7 +11,6 @@ class FindDcpsTest extends TestCase
     /**
      * @throws InputMissingException
      */
-    
     public function test_find()
     {
         $dcps = FindDcps::find(__DIR__.'/../..', 5);
