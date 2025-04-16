@@ -84,6 +84,23 @@ class CplParserTest extends TestCase
          */
     }
 
+    public function test_frame_rate()
+    {
+        $this->assertEquals(
+            $this->parser->FrameRate(),
+            24.0
+        );
+    }
+
+    public function test_aspect_ratio()
+    {
+        $this->assertEquals(
+            $this->parser->AspectRatio(),
+            1.9
+        );
+    }
+
+
     public function test_reel()
     {
         $this->assertIsObject(
